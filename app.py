@@ -32,7 +32,6 @@ def cryptopuff(token_id):
     token_id = int(token_id)
     num_first_names = len(FIRST_NAMES)
     num_last_names = len(LAST_NAMES)
-    num_attributes = len(INT_ATTRIBUTES)
     cryptopuff_name = "%s %s" % (FIRST_NAMES[token_id % num_first_names], LAST_NAMES[token_id % num_last_names])
 
     base = token_id % 6 + 1
