@@ -43,7 +43,7 @@ def cryptopuff(token_id):
     _add_attribute(attributes, 'level', INT_ATTRIBUTES, token_id)
     _add_attribute(attributes, 'stamina', FLOAT_ATTRIBUTES, token_id)
     _add_attribute(attributes, 'personality', STR_ATTRIBUTES, token_id)
-    
+
     return jsonify({
         'name': cryptopuff_name,
         'description': "Generic puff description. This really should be customized.",
@@ -66,7 +66,7 @@ def _compose_image(image_files, token_id):
         else:
             composite = foreground
 
-    output_path = "images/output/{%s}.png" % token_id
+    output_path = "images/output/%s.png" % token_id
     composite.save(output_path)
 
     blob = _get_bucket().blob(f"puffs/{token_id}.png")
