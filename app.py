@@ -53,7 +53,7 @@ def cryptopuff(token_id):
 
 
 def _add_attribute(existing, attribute_name, options, token_id):
-    existing[attribute_name] = options[len(options) % token_id]
+    existing[attribute_name] = options[token_id % len(options)]
 
 def _compose_image(image_files, token_id):
     composite = None
