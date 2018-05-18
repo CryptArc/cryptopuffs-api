@@ -10,8 +10,8 @@ from PIL import Image
 import os
 import mimetypes
 
-GOOGLE_STORAGE_PROJECT = "opensea-prod"
-GOOGLE_STORAGE_BUCKET = 'opensea-prod.appspot.com'
+GOOGLE_STORAGE_PROJECT = os.environ['GOOGLE_STORAGE_PROJECT']
+GOOGLE_STORAGE_BUCKET = os.environ['GOOGLE_STORAGE_BUCKET']
 
 app = Flask(__name__)
 
